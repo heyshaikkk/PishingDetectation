@@ -7,8 +7,8 @@ Original file is located at
     https://colab.research.google.com/drive/1m-Vrji4OTagR8E0bz6aI6XpjOzChgTUa
 """
 
-!pip install streamlit
-!pip install numpy  # Ensure numpy is installed as well
+pip install streamlit
+pip install numpy  # Ensure numpy is installed as well
 
 import numpy as np
 import pandas as pd
@@ -813,8 +813,8 @@ if st.button('Check Safety'):
 #         except Exception as e:
 #             st.error(f'An error occurred: {str(e)}')
 
-! pip install pyngrok
+pip install pyngrok
 
-! ngrok authtoken 2dlsVFnF3ySuByBHcYmcv67YggX_5NYZ8u49RwasgVk3QW5LU
+ngrok authtoken 2dlsVFnF3ySuByBHcYmcv67YggX_5NYZ8u49RwasgVk3QW5LU
 
-!streamlit run --server.port 8501 web_app.py
+streamlit run --server.port 8501 web_app.py
