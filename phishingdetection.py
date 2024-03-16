@@ -726,30 +726,26 @@ class FeatureExtraction:
 gbc = GradientBoostingClassifier(max_depth=4,learning_rate=0.7)
 gbc.fit(X_train,y_train)
 
-url="http://8csdg3iejj.lilagoraj.pl/"
-#can provide any URL. this URL was taken from PhishTank
-obj = FeatureExtraction(url)
-x = np.array(obj.getFeaturesList()).reshape(1,30)
-y_pred =gbc.predict(x)[0]
-if y_pred==1:
-  print("We guess it is a safe website")
-else:
-  print("Caution! Suspicious website detected")
+# url="http://8csdg3iejj.lilagoraj.pl/"
+# #can provide any URL. this URL was taken from PhishTank
+# obj = FeatureExtraction(url)
+# x = np.array(obj.getFeaturesList()).reshape(1,30)
+# y_pred =gbc.predict(x)[0]
+# if y_pred==1:
+#   print("We guess it is a safe website")
+# else:
+#   print("Caution! Suspicious website detected")
 
 
 
 
-"""
-
-web_app.py
 
 
-```
 
 import streamlit as st
 import numpy as np
 
- def predict_safety(url):
+def predict_safety(url):
     x = np.array(obj.getFeaturesList(url)).reshape(1, 30)
     y_pred = gbc.predict(x)[0]
     return y_pred
@@ -773,8 +769,4 @@ if st.button('Check Safety'):
         except Exception as e:
             st.error(f'An error occurred: {str(e)}')
 
-```
-
-
-"""
 
