@@ -736,10 +736,6 @@ if y_pred==1:
 else:
   print("Caution! Suspicious website detected")
 
-!pip install streamlit
-!pip install pyngrok
-!ngrok authtoken
-!export NGROK_AUTH_TOKEN=2dlsVFnF3ySuByBHcYmcv67YggX_5NYZ8u49RwasgVk3QW5LU
 
 
 
