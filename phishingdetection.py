@@ -23,7 +23,7 @@ from sklearn import metrics
 import warnings
 warnings.filterwarnings('ignore')
 
-data = pd.read_csv('/content/phishing.csv')
+data = pd.read_csv('/workspaces/PishingDetectation/phishing.csv')
 data.head()
 
 data.columns
