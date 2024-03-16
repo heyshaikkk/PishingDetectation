@@ -231,8 +231,7 @@ plt.show()
 
 """# Decoding URL"""
 
-!pip install python-whois
-!pip install python-googlesearch
+
 
 import ipaddress
 import re
