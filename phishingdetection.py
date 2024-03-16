@@ -720,11 +720,17 @@ class FeatureExtraction:
         except:
             return 1
 
-    def getFeaturesList(self):
+    def getFeaturesList(self,url):
         return self.features
 
 gbc = GradientBoostingClassifier(max_depth=4,learning_rate=0.7)
 gbc.fit(X_train,y_train)
+
+def predict_safety(url):
+    obj = FeatureExtraction(url)
+    x = np.array(obj.getFeaturesList(url)).reshape(1, 30)
+    y_pred = gbc.predict(x)[0]
+    return y_pred
 
 # url="http://8csdg3iejj.lilagoraj.pl/"
 # #can provide any URL. this URL was taken from PhishTank
@@ -740,12 +746,11 @@ gbc.fit(X_train,y_train)
 
 
 
-
-
 import streamlit as st
 import numpy as np
 
 def predict_safety(url):
+    obj = FeatureExtraction(url)
     x = np.array(obj.getFeaturesList(url)).reshape(1, 30)
     y_pred = gbc.predict(x)[0]
     return y_pred
